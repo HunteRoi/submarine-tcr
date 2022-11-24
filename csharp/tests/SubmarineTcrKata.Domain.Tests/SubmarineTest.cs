@@ -41,6 +41,7 @@ public class SubmarineTest
 
     [Theory]
     [InlineData(5)]
+    [InlineData(8)]
     public void ShouldGoUp(int value)
     {
         _submarine.ExecuteCommand("up " + value);
