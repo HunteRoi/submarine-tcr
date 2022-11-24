@@ -10,5 +10,10 @@ public class SubmarineTest
     public SubmarineTest() => _submarine = new Submarine();
 
     [Fact]
-    public void SomeFakeTest() => _submarine.Should().NotBeNull();
+    public void ShouldBeAtZeroPosition()
+    {
+        _submarine.Aim.Should().Be(0);
+        _submarine.Position.Should().Be(0);
+        _submarine.Depth.Should().Be(0);
+    }
 }
