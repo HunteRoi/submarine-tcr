@@ -48,12 +48,13 @@ public class SubmarineTest
         _submarine.Aim.Should().Be(-value);
     }
 
-    [Fact]
-    public void ShouldGoUpTwice()
+    [Theory]
+    [InlineData(5,8)]
+    public void ShouldGoUpTwice(int firstMove, int secondMove)
     {
-        _submarine.ExecuteCommand("up 5");
-        _submarine.ExecuteCommand("up 8");
+        _submarine.ExecuteCommand("up " + firstMove);
+        _submarine.ExecuteCommand("up " + secondMove);
 
-        _submarine.Aim.Should().Be(-(5 + 8));
+        _submarine.Aim.Should().Be(-(firstMove + secondMove));
     }
 }
