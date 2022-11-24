@@ -27,4 +27,13 @@ public class SubmarineTest
 
         _submarine.Aim.Should().Be(value);
     }
+
+    [Fact]
+    public void ShouldGoDownTwice()
+    {
+        _submarine.ExecuteCommand("down 2");
+        _submarine.ExecuteCommand("down 3");
+
+        _submarine.Aim.Should().Be(5);
+    }
 }

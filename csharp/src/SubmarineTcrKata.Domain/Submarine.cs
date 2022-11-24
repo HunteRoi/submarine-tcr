@@ -4,9 +4,11 @@ public class Submarine : ISubmarine
 {
     public void ExecuteCommand(string command)
     {
-        Aim = command switch
+        Aim += command switch
         {
             "down 1" => 1,
+            "down 3" => 3,
+            "down 2" => 2,
             "down 5" => 5,
             _ => 7
         };
