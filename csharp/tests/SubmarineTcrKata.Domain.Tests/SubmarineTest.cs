@@ -32,8 +32,8 @@ public class SubmarineTest
     [InlineData(2,3)]
     public void ShouldGoDownTwice(int firstMove, int secondMove)
     {
-        _submarine.ExecuteCommand("down " +firstMove);
-        _submarine.ExecuteCommand("down "+ secondMove);
+        _submarine.ExecuteCommand("down " + firstMove);
+        _submarine.ExecuteCommand("down " + secondMove);
 
         _submarine.Aim.Should().Be(firstMove + secondMove);
     }
