@@ -4,12 +4,12 @@ public class Submarine : ISubmarine
 {
     public void ExecuteCommand(string command)
     {
-        if (command == "down 1")
-            Aim = 1;
-        else if (command == "down 5")
-            Aim = 5;
-        else
-            Aim = 7;
+        Aim = command switch
+        {
+            "down 1" => 1,
+            "down 5" => 5,
+            _ => 7
+        };
     }
 
     public int Aim
