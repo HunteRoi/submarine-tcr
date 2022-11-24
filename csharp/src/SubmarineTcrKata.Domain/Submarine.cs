@@ -8,18 +8,18 @@ public class Submarine : ISubmarine
         var movement = splitCommand.First();
         var value = int.Parse(splitCommand.Last());
         
-        if (movement == "down")
+        switch (movement)
         {
-            Aim += value;
-        }
-        else if (movement == "up")
-        {
-            Aim -= value;
-        }
-        else
-        {
-            Position += value;
-            Depth += Aim * value;
+            case "down":
+                Aim += value;
+                break;
+            case "up":
+                Aim -= value;
+                break;
+            default:
+                Position += value;
+                Depth += Aim * value;
+                break;
         }
     }
 
