@@ -5,8 +5,8 @@ public class Submarine : ISubmarine
     public void ExecuteCommand(string command)
     {
         var splitCommand = command.Split(" ");
-        var movement = splitCommand[0];
-        var value = int.Parse(splitCommand[1]);
+        var movement = splitCommand.First();
+        var value = int.Parse(splitCommand.Last());
         
         if (movement == "down")
         {
