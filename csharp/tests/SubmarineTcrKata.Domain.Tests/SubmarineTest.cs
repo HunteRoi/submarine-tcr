@@ -89,4 +89,17 @@ public class SubmarineTest
         _submarine.Aim.Should().Be(3);
         _submarine.Depth.Should().Be(3 * 2);
     }
+    
+    [Fact]
+    public void ShouldGoDownThenForwardTwice()
+    {
+        _submarine.ExecuteCommand("down 3");
+        
+        _submarine.ExecuteCommand("forward 2");
+        _submarine.ExecuteCommand("forward 3");
+
+        _submarine.Position.Should().Be(2 + 3);
+        _submarine.Aim.Should().Be(3);
+        _submarine.Depth.Should().Be((3 * 2) + (3 * 3));
+    }
 }

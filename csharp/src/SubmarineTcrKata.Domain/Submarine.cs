@@ -19,7 +19,7 @@ public class Submarine : ISubmarine
         else
         {
             Position += value;
-            Depth = Aim * value;
+            Depth += Aim * value;
         }
     }
 
