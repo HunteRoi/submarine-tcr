@@ -6,8 +6,10 @@ public class Submarine : ISubmarine
     {
         if (command == "down 1")
             Aim = 1;
-        else
+        else if (command == "down 5")
             Aim = 5;
+        else
+            Aim = 7;
     }
 
     public int Aim

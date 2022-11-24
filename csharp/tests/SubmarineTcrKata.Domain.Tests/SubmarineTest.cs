@@ -20,6 +20,7 @@ public class SubmarineTest
     [Theory]
     [InlineData(1)]
     [InlineData(5)]
+    [InlineData(7)]
     public void ShouldGoDown(int value)
     {
         _submarine.ExecuteCommand("down " + value);
