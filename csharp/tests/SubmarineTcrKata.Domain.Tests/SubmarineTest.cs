@@ -50,6 +50,7 @@ public class SubmarineTest
 
     [Theory]
     [InlineData(5,8)]
+    [InlineData(7,4)]
     public void ShouldGoUpTwice(int firstMove, int secondMove)
     {
         _submarine.ExecuteCommand("up " + firstMove);
