@@ -10,6 +10,7 @@ public class Submarine : ISubmarine
             "down 3" => 3,
             "down 2" => 2,
             "down 5" => 5,
+            "down 8" => 8,
             _ => 7
         };
     }

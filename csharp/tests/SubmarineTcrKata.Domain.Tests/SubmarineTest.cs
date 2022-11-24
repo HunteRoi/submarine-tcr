@@ -30,6 +30,7 @@ public class SubmarineTest
 
     [Theory]
     [InlineData(2,3)]
+    [InlineData(8,3)]
     public void ShouldGoDownTwice(int firstMove, int secondMove)
     {
         _submarine.ExecuteCommand("down " + firstMove);
