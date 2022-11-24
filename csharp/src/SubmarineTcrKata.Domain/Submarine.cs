@@ -6,15 +6,16 @@ public class Submarine : ISubmarine
     {
         var splitCommand = command.Split(" ");
         var movement = splitCommand[0];
+        var value = int.Parse(splitCommand[1]);
+        
         if (movement == "down")
         {
-            Aim += int.Parse(splitCommand[1]);    
+            Aim += value;
         }
         else
         {
-            Aim -= int.Parse(splitCommand[1]);
+            Aim -= value;
         }
-
     }
 
     public int Aim
