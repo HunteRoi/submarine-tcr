@@ -4,7 +4,10 @@ public class Submarine : ISubmarine
 {
     public void ExecuteCommand(string command)
     {
-        Aim = 1;
+        if (command == "down 1")
+            Aim = 1;
+        else
+            Aim = 5;
     }
 
     public int Aim
