@@ -12,17 +12,18 @@ public class Submarine : ISubmarine
         {
             Aim += value;
         }
-        else
+        else if (movement == "up")
         {
             Aim -= value;
         }
+        else
+        {
+            Position += value;
+            Depth = Aim * value;
+        }
     }
 
-    public int Aim
-    {
-        private set;
-        get;
-    } = 0;
-    public int Position => 0;
-    public int Depth => 0;
+    public int Aim { private set; get; } = 0;
+    public int Position { private set; get; } = 0;
+    public int Depth { private set; get; } = 0;
 }
