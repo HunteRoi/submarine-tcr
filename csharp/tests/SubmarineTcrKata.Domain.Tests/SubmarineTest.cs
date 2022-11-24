@@ -38,4 +38,11 @@ public class SubmarineTest
 
         _submarine.Aim.Should().Be(firstMove + secondMove);
     }
+
+    [Fact]
+    public void ShouldGoUp()
+    {
+        _submarine.ExecuteCommand("up 5");
+        _submarine.Aim.Should().Be(-5);
+    }
 }
